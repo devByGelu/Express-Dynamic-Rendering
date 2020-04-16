@@ -1,0 +1,30 @@
+<%- include('includes/head.ejs') %>
+
+
+      <form action="/student/addcourse" method="POST">
+        <div class="list-group">
+          <button
+            type="button"
+            class="list-group-item list-group-item-action active"
+          >
+            Available Courses
+          </button>
+
+          <% courses.forEach(course => { %>
+           
+            <input
+            name="data"
+            type="submit"
+            value=<%= course.name %> 
+            class="list-group-item list-group-item-action"
+            />
+            <input name="data" type="hidden" value=<%= course.id %> />
+            
+            
+            <% }) %>
+
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

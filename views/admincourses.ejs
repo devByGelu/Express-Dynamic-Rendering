@@ -1,0 +1,32 @@
+<%- include('includes/head.ejs') %>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <% data.forEach(dat => { %>
+
+          <table class="table">
+            <h3 class="display-4 text-secondary"><%= dat.coursename %></h3>
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Name</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% dat.coursemates.forEach(stud => { %>
+
+              <tr>
+                <th scope="row"><%= stud %></th>
+                <td></td>
+              </tr>
+
+              <% }) %>
+            </tbody>
+          </table>
+
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
